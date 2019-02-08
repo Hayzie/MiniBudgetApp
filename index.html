@@ -1,10 +1,7 @@
-
 <html>
 
 <head>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         Budget App
     </title>
@@ -26,7 +23,7 @@
             width: 50%;
             margin: 0 auto;
             border-radius: 4px;
-            padding: 2px;
+            padding: 0px;
             padding-top: 14px;
             padding-left: 14px;
             padding-right: 14px;
@@ -43,7 +40,7 @@
             /*grid-row-gap: 4px;*/
             border-radius: 4px;
             background: #FFFFFF;
-            padding: 4px;
+            padding: 0px;
             /*grid-template-columns: auto auto auto;*/
             width: 50%;
             margin: 0 auto;
@@ -54,7 +51,7 @@
 
             width: 50%;
             margin: 0 auto;
-            padding: 10px;
+            padding: 0px;
             border-radius: 4px;
             margin-bottom: 10px;
         }
@@ -174,6 +171,7 @@
         }
 
         #form-add-exp{
+            padding: 0px;
             display: grid;
             grid-template-rows: auto auto auto auto auto auto auto auto auto; 
             height: auto;
@@ -233,6 +231,7 @@
 
             width: 50%;
             margin: 0 auto;
+            padding: 0px;
         
         }
 
@@ -253,7 +252,17 @@
         
         }
 
+        #income-form{
 
+            padding: 0px;
+        }
+
+
+        @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        #myList,#main-info,.exp-form,#sorting-Bar{
+        width: 100%;
+        }
 
 }
 
@@ -266,7 +275,7 @@
 
 <body onload="initialise()">
 
-   
+    <h1 id="header">Mini budget app</h1>
 
     <form class="exp-form" id="form-add-exp" style="display: none">
         <label for="name" class="identifier">Cost</label>
@@ -310,7 +319,6 @@
             <div id="progress-container" style="display:none">
                 <p id="exp_percentage"></p>
                 <div id="div-progress">
-
                 </div>
             </div>
         </div>
