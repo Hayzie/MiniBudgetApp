@@ -1,24 +1,23 @@
 <html>
 
 <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         Budget App
     </title>
 
     <style>
+        body {
 
-        body{
+            background: white;
 
-            background:white;
-            
         }
 
-        h1{
+        h1 {
             text-align: center;
         }
 
-        .exp-form{
+        .exp-form {
 
             width: 50%;
             margin: 0 auto;
@@ -29,12 +28,12 @@
             padding-right: 14px;
         }
 
-        .button-primary{
+        .button-primary {
             margin-top: 20px;
         }
 
         #myList {
-            
+
             display: grid;
             /*grid-column-gap: 4px;*/
             /*grid-row-gap: 4px;*/
@@ -44,10 +43,10 @@
             /*grid-template-columns: auto auto auto;*/
             width: 50%;
             margin: 0 auto;
-           
+
         }
 
-        #main-info{
+        #main-info {
 
             width: 50%;
             margin: 0 auto;
@@ -56,7 +55,7 @@
             margin-bottom: 10px;
         }
 
-        #error_text{
+        #error_text {
 
             color: red;
         }
@@ -65,10 +64,10 @@
 
             width: 40px;
             margin-bottom: 2px;
-            float: left; 
+            float: left;
         }
 
-        .tot_text{
+        .tot_text {
             font-weight: bold;
             font-size: 14px;
             grid-row: 1;
@@ -80,7 +79,7 @@
             opacity: 0.87;
         }
 
-        .date_text{
+        .date_text {
 
             font-size: 12px;
             color: #000000;
@@ -97,33 +96,33 @@
             opacity: 0.87;
         }
 
-        .exp_button{
+        .exp_button {
 
             border: none;
             background: inherit;
             width: auto;
             cursor: pointer;
             font-size: 10px;
-            
+
         }
 
-        .u-full-width{  
-            
+        .u-full-width {
+
             padding: 10px;
             cursor: pointer;
-            background:inherit;
+            background: inherit;
             margin: 10px;
             margin-left: 0;
-        
+
         }
 
 
-        .infor-labels{
+        .infor-labels {
             margin-bottom: 2px;
-            opacity: 0.87;    
+            opacity: 0.87;
         }
 
-        .label{
+        .label {
             display: grid;
             grid-template-rows: auto auto;
             grid-template-columns: auto auto;
@@ -135,15 +134,15 @@
             margin-bottom: 2px;
             background: #ffffff;
             cursor: pointer;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
         }
 
-        .label:hover{
-            background-color:#EEEEEE;
+        .label:hover {
+            background-color: #EEEEEE;
         }
 
-        #progress-container{
+        #progress-container {
             background: #eeeeee;
             width: 100%;
             border-radius: 4px;
@@ -151,46 +150,47 @@
             margin-bottom: 8px;
         }
 
-        #div-progress{
+        #div-progress {
             background: #B3E5FC;
             padding: 0;
             width: 0%;
             height: inherit;
             border-radius: 20px;
-            
+
         }
-        #exp_percentage{
+
+        #exp_percentage {
             position: absolute;
             margin: 8px;
         }
 
-        .info-div{
+        .info-div {
             width: 100%;
             border-bottom: solid 1px lightgray;
             margin-bottom: 8px;
         }
 
-        #form-add-exp{
+        #form-add-exp {
             padding: 0px;
             display: grid;
-            grid-template-rows: auto auto auto auto auto auto auto auto auto; 
+            grid-template-rows: auto auto auto auto auto auto auto auto auto;
             height: auto;
         }
 
-        .identifier{
+        .identifier {
             margin-left: 11px;
             color: #000000;
             opacity: 0.87;
         }
 
-        #div-period{
+        #div-period {
             display: grid;
             grid-template-columns: 100px 100px 100px;
             padding: 0;
             border: none;
         }
 
-        .period-label{
+        .period-label {
 
             width: 86px;
             height: auto;
@@ -205,67 +205,70 @@
             font-weight: normal;
             color: #000000;
             background: #E0E0E0;
-    
+
         }
 
-        .button-primary{
+        .button-primary {
 
             border-radius: 20px;
         }
 
-        #btn-Cancel-expense{
+        #btn-Cancel-expense {
             border-radius: 20px;
         }
 
-        .period-label:hover{
+        .period-label:hover {
             opacity: 0.87;
         }
 
-        #tot-expenses,#income{
+        #tot-expenses,
+        #income {
 
             font-size: 24px;
             font-weight: bolder;
         }
 
-        #sorting-Bar{
+        #sorting-Bar {
 
             width: 50%;
             margin: 0 auto;
             padding: 0px;
-        
+
         }
 
-        #sort,#selectCategory{
+        #sort,
+        #selectCategory {
 
             border: none;
             background: #EEEEEE;
-            
+
         }
 
-        #sort,#selectCategory:focus{
+        #sort,
+        #selectCategory:focus {
 
             border: solid 2px lightblue;
         }
 
-        #btn_UpdateExpense{
+        #btn_UpdateExpense {}
 
-        
-        }
-
-        #income-form{
+        #income-form {
 
             padding: 0px;
         }
 
 
         @media only screen and (max-width: 768px) {
-        /* For mobile phones: */
-        #myList,#main-info,.exp-form,#sorting-Bar{
-        width: 100%;
+
+            /* For mobile phones: */
+            #myList,
+            #main-info,
+            .exp-form,
+            #sorting-Bar {
+                width: 100%;
+            }
+
         }
-
-}
-
     </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
@@ -787,9 +790,11 @@
 
         }
 
-        function updateIncomeLabels(percentage) {
+        function updateIncomeLabels(per) {
+           
             document.getElementById('income').innerHTML = "R" + getIncome();
-            document.getElementById('exp_percentage').innerHTML = percentage + "% of cash";
+            console.log("percent test " + per);
+            document.getElementById('exp_percentage').innerHTML = per + "% of cash";
         }
 
         function selecCategory(selectOption) {
@@ -897,13 +902,13 @@
         buttonAddExp.addEventListener("click", (event) => {
             event.preventDefault();
 
-            var tot = document.getElementById('txtExp_tot').value;
+            var tot = parseInt(document.getElementById('txtExp_tot').value);
             console.log(selectedCategory);
             var period = selectedPeriod;
             var notes = document.getElementById('txt_notes').value;
             var optns = document.getElementById('selectCategory');
 
-            if (tot == "") {
+            if (tot == "" || tot<0) {
 
                 document.getElementById('error_text').innerHTML = "Enter the total";
 
@@ -941,13 +946,16 @@
         var buttonUpdateExp = document.getElementById('btn_UpdateExpense');
         buttonUpdateExp.addEventListener("click", (event) => {
             event.preventDefault();
-
+           
             var selectOption = document.getElementById('selectCategory');
-            var total = document.getElementById('txtExp_tot').value;
+            var total = parseInt(document.getElementById('txtExp_tot').value);
             var category = selectOption.options[selectOption.selectedIndex].text;
             var notes = document.getElementById("txt_notes").value;
             var period = selectedPeriod;
+
+            if(total!="" && category !=""&&total>0){
             updateExpense(total, category, period, notes);
+            }
         })
 
         function updateExpense(total, category, period, notes) {
@@ -1026,8 +1034,6 @@
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             saveIncome();
-            updateIncomeLabels();
-
         })
 
 
@@ -1040,16 +1046,18 @@
                 document.getElementById('main-info').style.display = "block";
                 var tot = getTotalExpenses();
                 var perc = getTotPercentage(tot);
-                updateIncomeLabels(perc);
                 updateProgress(perc);
-            
+                updateIncomeLabels(perc);
+                console.log("Perc test " + perc + "tot " + tot);
+                updateProgress(perc);
+
                 updateTotExpensesLabel();
                 compareExpenseIncome();
                 showProgress();
-                console.log("percccc"+ perc);
+                console.log("percccc" + perc);
                 document.getElementById('income-div').style.display = "block";
                 document.getElementById('sorting-Bar').style.display = "block";
-               
+
             } else {
                 document.getElementById('error_text_1').style.display = "block";
                 document.getElementById('error_text_1').style.color = "red";
