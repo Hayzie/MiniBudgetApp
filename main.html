@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <title>
+        Budget App
+    </title>
+
+    <style>
+       
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+
+</head>
+
+<body onload="initialise()">
+
+    <h1 id="header">Mini budget app</h1>
+
+    <form class="exp-form" id="form-add-exp" style="display: none">
+        <label for="name" class="identifier">Cost</label>
+        <input class="u-full-width" type="number" id="txtExp_tot" placeholder="cost eg: 1200" required>
+        <label for="name" class="identifier">Category</label>
+        <select id="selectCategory" class="u-full-width" onchange="selecCategory(this)">
+        </select>
+
+        <label for="name" class="identifier">Period</label>
+        <div id="div-period" class="u-full-width">
+
+        </div>
+
+        <label for="name" class="identifier">Notes</label>
+        <textarea class="u-full-width" type="text" id="txt_notes"></textarea>
+
+        </div>
+        <button id="btn_AddNewExpense" class="button-primary">Add</button>
+        <button id="btn_UpdateExpense" class="button-primary" style="display:none">Update</button>
+        <button id="btn-Cancel-expense" class="">Cancel</button>
+        <p id="error_text"></p>
+    </form>
+
+    <form class="exp-form" id="income-form" style="display: none">
+        <label for="name">Cash</label>
+        <input class="u-full-width" type="number" id="txt_income" placeholder="cash eg: 16000">
+        <button id="btn_save_income" class="button-primary">Save</button>
+        <p id="error_text_1"></p>
+    </form>
+
+    <div id="main-info">
+
+        <div id="income-div" class="info-div" style="display:none">
+            <label for="name">Cash</label>
+            <p id="income" class="infor-labels">0.00</p>
+        </div>
+
+        <div id="expenses-div" class="infor-div">
+            <label for="name">Total Expenses</label>
+            <p id="tot-expenses" class="infor-labels">0.00</p>
+            <div id="progress-container" style="display:none">
+                <p id="exp_percentage"></p>
+                <div id="div-progress">
+                </div>
+            </div>
+        </div>
+
+        <button id="btn-show-income-form" class="button-primary" onclick="switchViews(this.id)"> Add Cash</button>
+        <button id="btn-show-expense-form" class="button-primary" onclick="switchViews(this.id)">New>></button>
+
+
+    </div>
+
+    <div id="sorting-Bar" class="u-full-width">
+        <select id="sort" onchange="sortExpenses(this)"></select>
+    </div>
+
+    <div id="myList"></div>
+
+    </ul>
+
+    <script src="scripts/budget.js"></script>
+
+</body>
+
+</html>
